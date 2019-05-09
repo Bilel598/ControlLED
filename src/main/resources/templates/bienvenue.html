@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Page d'acceuil</title>
+</head>
+<body>
+<!-- <p th:text="${session.user.principal.username}">Bienvenue</p> -->
+<h1>Bienvenue <a th:inline="text">[[${#httpServletRequest.remoteUser}]]</a></h1>
+<a th:href="@{'/allumer'}"><input type="submit" value="Allumer la LED"/></a>
+<a th:href="@{'/eteindre'}"><input type="submit" value="Eteindre la LED"/></a>
+
+</body>
+</html>
